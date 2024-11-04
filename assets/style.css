@@ -1,0 +1,104 @@
+/* style.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.banner {
+    background: url('assets/images/baner.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+.banner button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.banner button:hover {
+    background-color: #218838;
+}
+
+.content {
+    display: none; /* Sembunyikan konten awal */
+}
+
+.card {
+    transition: transform 0.3s;
+    border: 1px solid #ddd; /* Add a border around the card */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure the corners stay rounded */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1.1rem;
+}
+
+.alert {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.image-container {
+    position: relative; /* Position for absolute children */
+    height: 250px; /* Set a fixed height for the image container */
+    overflow: hidden; /* Hide overflow */
+}
+
+.image-container img {
+    width: 100%; /* Make images responsive */
+    height: 100%; /* Ensure images fill the container */
+    object-fit: cover; /* Maintain aspect ratio */
+    transition: opacity 0.5s; /* Fade effect */
+    position: absolute; /* Overlay the second image */
+    top: 0;
+    left: 0;
+}
+
+.image-container .second-image {
+    opacity: 0; /* Hide the second image by default */
+}
+
+.image-container:hover .second-image {
+    opacity: 1; /* Show the second image on hover */
+}
+
+.image-container:hover .primary-image {
+    opacity: 0; /* Hide the first image on hover */
+}
